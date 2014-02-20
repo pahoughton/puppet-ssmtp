@@ -22,6 +22,7 @@ class ssmtp::params {
   $from_line_override = ''
   $use_tls = ''
   $use_starttls = ''
+  $tls_ca_file = undef
   $tls_cert = ''
   $auth_user = ''
   $auth_pass = ''

@@ -37,6 +37,10 @@
 #   Specifies whether ssmtp uses TLS to talk to the SMTP server.
 #   Default: no
 #
+# [*tls_ca_file*]
+#   Specifies ca file to use
+#   Default: undef
+#
 # [*use_starttls*]
 #   Specifies whether ssmtp does a EHLO/STARTTLS before starting SSL
 #   negotiation. See RFC 2487.
@@ -134,6 +138,7 @@ class ssmtp (
   $hostname            = params_lookup( 'hostname' ),
   $from_line_override  = params_lookup( 'from_line_override' ),
   $use_tls             = params_lookup( 'use_tls' ),
+  $tls_ca_file         = params_lookup( 'tls_ca_file' ),
   $use_starttls        = params_lookup( 'use_starttls' ),
   $tls_cert            = params_lookup( 'tls_cert' ),
   $auth_user           = params_lookup( 'auth_user' ),
